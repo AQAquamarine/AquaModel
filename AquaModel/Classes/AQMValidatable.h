@@ -10,6 +10,10 @@
 
 @protocol AQMValidatable <NSObject>
 
+- (BOOL)validate;
+
+@optional
+
 + (NSDictionary *)validationMap;
 
 @end

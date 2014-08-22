@@ -11,7 +11,7 @@
 #import "AQMValidatable.h"
 #import "AQMCallbackable.h"
 
-@interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable>
+@interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable, AQMValidatable>
 
 # pragma mark - Requestable
 
