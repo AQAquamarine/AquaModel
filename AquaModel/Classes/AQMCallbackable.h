@@ -12,10 +12,12 @@
 
 @optional
 
-+ (NSArray *)beforeValidation;
-+ (NSArray *)afterValidation;
+- (void)afterCreate;
 
-+ (NSArray *)beforeSave;
-+ (NSArray *)afterSave;
+- (void)beforeValidation;
+- (void)afterValidation;
+
+- (void)beforeSave;
+- (void)afterSave;
 
 @end

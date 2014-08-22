@@ -17,8 +17,8 @@
 # pragma mark - ActiveRecord
 
 + (instancetype)create;
-- (void)update;
-- (void)destroy;
+- (BOOL)update;
+- (BOOL)destroy;
 
 # pragma mark - Requestable
 

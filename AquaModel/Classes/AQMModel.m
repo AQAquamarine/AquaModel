@@ -11,18 +11,33 @@
 
 @implementation AQMModel
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        [self afterCreate];
+    }
+    return self;
+}
+
 # pragma mark - ActiveRecord
 
 + (instancetype)create {
     return [self new];
 }
 
-- (void)update {
+- (BOOL)update {
+    [self beforeValidation];
+    if ([self validate] == NO) { return NO; }
+    [self afterValidation];
+    [self beforeSave];
     // TODO
+    [self afterSave];
+    return YES;
 }
 
-- (void)destroy {
+- (BOOL)destroy {
     // TODO
+    return NO;
 }
 
 # pragma mark - Validatable
@@ -81,20 +96,19 @@
 
 # pragma mark - Callbackable
 
-+ (NSArray *)beforeValidation {
-    return @[];
+- (void)afterCreate {
 }
 
-+ (NSArray *)afterValidation {
-    return @[];
+- (void)beforeValidation {
 }
 
-+ (NSArray *)beforeSave {
-    return @[];
+- (void)afterValidation {
 }
 
-+ (NSArray *)afterSave {
-    return @[];
+- (void)beforeSave {
+}
+
+- (void)afterSave {
 }
 
 # pragma mark - JSONSeriarizable
