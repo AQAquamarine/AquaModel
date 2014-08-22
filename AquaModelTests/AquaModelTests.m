@@ -5,6 +5,7 @@
 #import "AQMModel.h"
 
 #import "Album.h"
+#import "Dog.h"
 
 SpecBegin(AQMModel)
 
@@ -47,6 +48,20 @@ describe(@"Validation", ^{
             Album *album = [[Album alloc] init];
             album.title = @"H";
             expect(album.validate).to.equal(NO);
+        });
+    });
+    
+    describe(@"anyOf validator", ^{
+        it(@"should pass when the name is Pochi", ^{
+            Dog *dog = [[Dog alloc] init];
+            dog.name = @"Pochi";
+            expect(dog.validate).to.equal(YES);
+        });
+        
+        it(@"should not pass when the name is Gozilla", ^{
+            Dog *dog = [[Dog alloc] init];
+            dog.name = @"Gozilla";
+            expect(dog.validate).to.equal(NO);
         });
     });
 });

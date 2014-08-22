@@ -10,4 +10,6 @@
 
 @interface Dog : AQMModel
 
+@property NSString *name;
+
 @end
