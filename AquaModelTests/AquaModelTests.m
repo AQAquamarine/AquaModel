@@ -35,6 +35,20 @@ describe(@"Validation", ^{
             expect(album.validate).to.equal(NO);
         });
     });
+    
+    describe(@"longerThan validator", ^{
+        it(@"should pass when the title is longer than 3", ^{
+            Album *album = [[Album alloc] init];
+            album.title = @"Hawaii";
+            expect(album.validate).to.equal(YES);
+        });
+        
+        it(@"should not pass when the title is shorter than 3", ^{
+            Album *album = [[Album alloc] init];
+            album.title = @"H";
+            expect(album.validate).to.equal(NO);
+        });
+    });
 });
 
 SpecEnd

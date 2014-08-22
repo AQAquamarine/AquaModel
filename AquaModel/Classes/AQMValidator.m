@@ -7,8 +7,7 @@
 //
 
 #import "AQMValidator.h"
-#import "AQMPresenceValidator.h"
-#import "AQMShorterThanValidator.h"
+#import "AQMValidators.h"
 
 @implementation AQMValidator
 
@@ -18,6 +17,10 @@
 
 + (id<AQMValueValidator>)shorterThan:(NSUInteger)length {
     return [[AQMShorterThanValidator alloc] initWithLength:length];
+}
+
++ (id<AQMValueValidator>)longerThan:(NSUInteger)length {
+    return [[AQMLongerThanValidator alloc] initWithLength:length];
 }
 
 @end

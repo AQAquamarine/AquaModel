@@ -12,7 +12,7 @@
 
 + (NSDictionary *)validationMap {
     return @{
-        @"title": @[[AQMValidator presence], [AQMValidator shorterThan:10]]
+        @"title": @[[AQMValidator presence], [AQMValidator shorterThan:10], [AQMValidator longerThan:3]]
     };
 }
 
