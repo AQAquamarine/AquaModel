@@ -27,8 +27,8 @@
     return [[AQMRegexpValidator alloc] initWithRegexp:regexp];
 }
 
-+ (id<AQMValueValidator>)anyOf:(NSSet *)set {
-    return [[AQMAnyOfValidator alloc] initWithSet:set];
++ (id<AQMValueValidator>)anyOf:(NSArray *)array {
+    return [[AQMAnyOfValidator alloc] initWithArray:array];
 }
 
 @end

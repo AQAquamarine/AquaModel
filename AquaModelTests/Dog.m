@@ -12,7 +12,7 @@
 
 + (NSDictionary *)validationMap {
     return @{
-        @"name": @[[AQMValidator anyOf:[NSSet setWithArray:@[@"Pochi", @"Tama"]]]]
+        @"name": @[[AQMValidator anyOf:@[@"Pochi", @"Tama"]]]
     };
 }
 

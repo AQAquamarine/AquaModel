@@ -14,5 +14,6 @@
 @property NSSet *set;
 
 - (instancetype)initWithSet:(NSSet *)set;
+- (instancetype)initWithArray:(NSArray *)array;
 
 @end

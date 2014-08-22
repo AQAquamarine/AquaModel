@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "AQMValueValidator.h"
+
+@protocol AQMValueValidator;
 
 @interface AQMValidator : NSObject
 
@@ -17,7 +18,7 @@
 + (id<AQMValueValidator>)longerThan:(NSUInteger)length;
 + (id<AQMValueValidator>)shorterThan:(NSUInteger)length;
 + (id<AQMValueValidator>)regexp:(NSRegularExpression *)regexp;
-+ (id<AQMValueValidator>)anyOf:(NSSet *)set;
++ (id<AQMValueValidator>)anyOf:(NSArray *)array;
 
 # pragma mark - Shorthands
 

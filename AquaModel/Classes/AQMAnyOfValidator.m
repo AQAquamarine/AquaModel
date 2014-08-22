@@ -18,6 +18,11 @@
     return self;
 }
 
+- (instancetype)initWithArray:(NSArray *)array {
+    NSSet *set = [NSSet setWithArray:array];
+    return [self initWithSet:set];
+}
+
 - (BOOL)validate:(id)value {
     if (value == nil) { return NO; }
     return [self.set containsObject:value];
