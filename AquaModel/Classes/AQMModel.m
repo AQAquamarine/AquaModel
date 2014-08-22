@@ -12,6 +12,18 @@
 
 #pragma mark - Requestable
 
++ (void)fetch:(NSUInteger)identifier {
+    // TODO
+}
+
+- (void)fetch {
+    // TODO
+}
+
+- (void)push {
+    // TODO
+}
+
 #pragma mark - AQMRequestable
 
 + (NSString *)resourceBasePath {
@@ -23,6 +35,7 @@
         @(AQMRequestTypeShow): @[@(AQMRequestMethodGET), @"/:id"],
         @(AQMRequestTypeCreate): @[@(AQMRequestMethodPOST), @"/"],
         @(AQMRequestTypeUpdate): @[@(AQMRequestMethodPATCH), @"/:id"],
+        @(AQMRequestTypeDestroy): @[@(AQMRequestMethodDELETE), @"/:id"]
     };
 }
 

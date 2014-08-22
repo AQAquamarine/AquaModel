@@ -13,7 +13,7 @@
 
 # pragma mark - Requestable
 
-+ (void)fetch;
++ (void)fetch:(NSUInteger)identifier;
 - (void)fetch;
 - (void)push;
 
