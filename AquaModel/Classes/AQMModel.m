@@ -11,7 +11,21 @@
 
 @implementation AQMModel
 
-#pragma mark - Validatable
+# pragma mark - ActiveRecord
+
++ (instancetype)create {
+    return [self new];
+}
+
+- (void)update {
+    // TODO
+}
+
+- (void)destroy {
+    // TODO
+}
+
+# pragma mark - Validatable
 
 - (BOOL)validate {
     NSDictionary *map = [[self class] validationMap];
@@ -21,7 +35,7 @@
     return YES;
 }
 
-#pragma mark - Validatable Helpers
+# pragma mark - Validatable Helpers
 
 - (BOOL)validateAttributeWithKey:(NSString *)key {
     NSArray *validators = [[self class] validationMap][key];
@@ -36,7 +50,7 @@
     return YES;
 }
 
-#pragma mark - Requestable
+# pragma mark - Requestable
 
 + (void)fetch:(NSUInteger)identifier {
     // TODO
@@ -50,7 +64,7 @@
     // TODO
 }
 
-#pragma mark - AQMRequestable
+# pragma mark - AQMRequestable
 
 + (NSString *)resourceBasePath {
     return [NSStringFromClass(self) lowercaseString]; // TODO: plularize
@@ -65,7 +79,7 @@
     };
 }
 
-#pragma mark - Callbackable
+# pragma mark - Callbackable
 
 + (NSArray *)beforeValidation {
     return @[];
@@ -83,6 +97,6 @@
     return @[];
 }
 
-#pragma mark - JSONSeriarizable
+# pragma mark - JSONSeriarizable
 
 @end

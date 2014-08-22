@@ -14,6 +14,12 @@
 
 @interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable, AQMValidatable>
 
+# pragma mark - ActiveRecord
+
++ (instancetype)create;
+- (void)update;
+- (void)destroy;
+
 # pragma mark - Requestable
 
 # pragma mark - Validatable
