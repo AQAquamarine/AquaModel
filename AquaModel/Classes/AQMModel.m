@@ -39,9 +39,23 @@
     };
 }
 
-#pragma mark - Validatable
-
 #pragma mark - Callbackable
+
++ (NSArray *)beforeValidation {
+    return @[];
+}
+
++ (NSArray *)afterValidation {
+    return @[];
+}
+
++ (NSArray *)beforeSave {
+    return @[];
+}
+
++ (NSArray *)afterSave {
+    return @[];
+}
 
 #pragma mark - JSONSeriarizable
 

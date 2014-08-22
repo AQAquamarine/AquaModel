@@ -63,6 +63,8 @@
 		D411F27F19A7848D00EA2ECF /* AQMModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQMModel.h; sourceTree = "<group>"; };
 		D411F28019A7848D00EA2ECF /* AQMModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQMModel.m; sourceTree = "<group>"; };
 		D411F28219A7878700EA2ECF /* AQMRequestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMRequestable.h; sourceTree = "<group>"; };
+		D411F28319A7921B00EA2ECF /* AQMValidatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMValidatable.h; sourceTree = "<group>"; };
+		D411F28419A792D100EA2ECF /* AQMCallbackable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMCallbackable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,8 @@
 				D411F27F19A7848D00EA2ECF /* AQMModel.h */,
 				D411F28019A7848D00EA2ECF /* AQMModel.m */,
 				D411F28219A7878700EA2ECF /* AQMRequestable.h */,
+				D411F28319A7921B00EA2ECF /* AQMValidatable.h */,
+				D411F28419A792D100EA2ECF /* AQMCallbackable.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";

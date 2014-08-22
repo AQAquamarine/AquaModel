@@ -8,13 +8,17 @@
 
 #import "MTLModel.h"
 #import "AQMRequestable.h"
+#import "AQMValidatable.h"
+#import "AQMCallbackable.h"
 
-@interface AQMModel : MTLModel <AQMRequestable>
+@interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable>
 
 # pragma mark - Requestable
 
 + (void)fetch:(NSUInteger)identifier;
 - (void)fetch;
 - (void)push;
+
+# pragma mark - Validatable
 
 @end
