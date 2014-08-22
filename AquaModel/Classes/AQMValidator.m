@@ -23,4 +23,12 @@
     return [[AQMLongerThanValidator alloc] initWithLength:length];
 }
 
++ (id<AQMValueValidator>)regexp:(NSRegularExpression *)regexp {
+    return [[AQMRegexpValidator alloc] initWithRegexp:regexp];
+}
+
++ (id<AQMValueValidator>)anyOf:(NSSet *)set {
+    return [[AQMAnyOfValidator alloc] initWithSet:set];
+}
+
 @end
