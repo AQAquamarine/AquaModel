@@ -26,6 +26,7 @@
 		D411F28719A7944C00EA2ECF /* AQMValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F28619A7944C00EA2ECF /* AQMValidator.m */; };
 		D411F28C19A7984D00EA2ECF /* AQMPresenceValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F28B19A7984D00EA2ECF /* AQMPresenceValidator.m */; };
 		D411F28F19A79D8100EA2ECF /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F28E19A79D8100EA2ECF /* Album.m */; };
+		D411F29219A79FA600EA2ECF /* AQMShorterThanValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F29119A79FA600EA2ECF /* AQMShorterThanValidator.m */; };
 		D9B8265D730E4D468D664C0E /* libPods-AquaModelTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 480082D06E27491497B60057 /* libPods-AquaModelTests.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		D411F28B19A7984D00EA2ECF /* AQMPresenceValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQMPresenceValidator.m; sourceTree = "<group>"; };
 		D411F28D19A79D8100EA2ECF /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
 		D411F28E19A79D8100EA2ECF /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		D411F29019A79FA600EA2ECF /* AQMShorterThanValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQMShorterThanValidator.h; sourceTree = "<group>"; };
+		D411F29119A79FA600EA2ECF /* AQMShorterThanValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQMShorterThanValidator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,8 @@
 			children = (
 				D411F28A19A7984D00EA2ECF /* AQMPresenceValidator.h */,
 				D411F28B19A7984D00EA2ECF /* AQMPresenceValidator.m */,
+				D411F29019A79FA600EA2ECF /* AQMShorterThanValidator.h */,
+				D411F29119A79FA600EA2ECF /* AQMShorterThanValidator.m */,
 			);
 			name = Validator;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D411F25A19A7839500EA2ECF /* AQMAppDelegate.m in Sources */,
+				D411F29219A79FA600EA2ECF /* AQMShorterThanValidator.m in Sources */,
 				D411F28119A7848D00EA2ECF /* AQMModel.m in Sources */,
 				D411F26019A7839500EA2ECF /* AQMViewController.m in Sources */,
 				D411F25619A7839500EA2ECF /* main.m in Sources */,
