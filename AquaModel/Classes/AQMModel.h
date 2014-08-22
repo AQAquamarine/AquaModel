@@ -11,4 +11,10 @@
 
 @interface AQMModel : MTLModel <AQMRequestable>
 
+# pragma mark - Requestable
+
++ (void)fetch;
+- (void)fetch;
+- (void)push;
+
 @end

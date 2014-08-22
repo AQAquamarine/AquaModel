@@ -12,6 +12,20 @@
 
 #pragma mark - Requestable
 
+#pragma mark - AQMRequestable
+
++ (NSString *)resourceBasePath {
+    return [NSStringFromClass(self) lowercaseString]; // TODO: plularize
+}
+
++ (NSDictionary *)resourceMap {
+    return @{
+        @(AQMRequestTypeShow): @[@(AQMRequestMethodGET), @"/:id"],
+        @(AQMRequestTypeCreate): @[@(AQMRequestMethodPOST), @"/"],
+        @(AQMRequestTypeUpdate): @[@(AQMRequestMethodPATCH), @"/:id"],
+    };
+}
+
 #pragma mark - Validatable
 
 #pragma mark - Callbackable

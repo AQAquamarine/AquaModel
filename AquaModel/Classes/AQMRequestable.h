@@ -8,16 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, AQMResuestType) {
-    AQMResuestTypeShow,
-    AQMResuestTypeCreate,
-    AQMResuestTypeUpdate,
-    AQMResuestTypeDestroy
+typedef NS_ENUM(NSUInteger, AQMRequestType) {
+    AQMRequestTypeShow,
+    AQMRequestTypeCreate,
+    AQMRequestTypeUpdate,
+    AQMRequestTypeDestroy
 };
 
 typedef NS_ENUM(NSUInteger, AQMRequestMethod) {
-    AQMResuestMethodGET,
-    AQMResuestMethodPOST,
+    AQMRequestMethodGET,
+    AQMRequestMethodPOST,
     AQMRequestMethodPATCH,
     AQMRequestMethodPUT,
     AQMRequestMethodDELETE
@@ -32,10 +32,10 @@ typedef NS_ENUM(NSUInteger, AQMRequestMethod) {
 //@example Rails routing
 //```
 //return @{
-//    AQMRequestTypeShow: @[AQMResuestMethodGET, @"/:id"],
-//    AQMRequestTypeCreate: @[AQMResuestMethodPOST, @"/"],
-//    AQMRequestTypeUpdate: @[AQMRequestMethodPATCH, @"/:id"],
-//    AQMRequestTypeDestroy: @[AQMRequestMethodDELETE, @"/:id"]
+//    @(AQMRequestTypeShow): @[@(AQMRequestMethodGET), @"/:id"],
+//    @(AQMRequestTypeCreate): @[@(AQMRequestMethodPOST), @"/"],
+//    @(AQMRequestTypeUpdate): @[@(AQMRequestMethodPATCH), @"/:id"],
+//    @(AQMRequestTypeDestroy): @[@(AQMRequestMethodDELETE), @"/:id"]
 //};
 //```
 + (NSDictionary *)resourceMap;
