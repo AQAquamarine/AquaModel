@@ -16,10 +16,6 @@
 
 # pragma mark - Requestable
 
-+ (void)fetch:(NSUInteger)identifier;
-- (void)fetch;
-- (void)push;
-
 # pragma mark - Validatable
 
 @end

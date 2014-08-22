@@ -25,6 +25,10 @@ typedef NS_ENUM(NSUInteger, AQMRequestMethod) {
 
 @protocol AQMRequestable <NSObject>
 
++ (void)fetch:(NSUInteger)identifier;
+- (void)fetch;
+- (void)push;
+
 //@example
 //return @"/albums";
 + (NSString *)resourceBasePath;
