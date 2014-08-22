@@ -10,6 +10,7 @@
 #import "AQMRequestable.h"
 #import "AQMValidatable.h"
 #import "AQMCallbackable.h"
+#import "AQMValidator.h"
 
 @interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable, AQMValidatable>
 

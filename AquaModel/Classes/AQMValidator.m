@@ -7,7 +7,12 @@
 //
 
 #import "AQMValidator.h"
+#import "AQMPresenceValidator.h"
 
 @implementation AQMValidator
+
++ (id<AQMValueValidator>)presence {
+    return [[AQMPresenceValidator alloc] init];
+}
 
 @end

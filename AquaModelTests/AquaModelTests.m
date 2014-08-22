@@ -1,34 +1,26 @@
-//
-//  AquaModelTests.m
-//  AquaModelTests
-//
-//  Created by kaiinui on 2014/08/22.
-//  Copyright (c) 2014年 Aquamarine. All rights reserved.
-//
+#import <Specta.h>
+#define EXP_SHORTHAND
+#import <Expecta.h>
 
-#import <XCTest/XCTest.h>
+#import "AQMModel.h"
 
-@interface AquaModelTests : XCTestCase
+#import "Album.h"
 
-@end
+SpecBegin(AQMModel)
 
-@implementation AquaModelTests
+describe(@"Validation", ^{
+    describe(@"presence validator", ^{
+        it(@"should pass when the title is not nil", ^{
+            Album *album = [[Album alloc] init];
+            album.title = @"Hawaii";
+            expect(album.validate).to.equal(YES);
+        });
+        
+        it(@"should not pass when the title is nil", ^{
+            Album *album = [[Album alloc] init];
+            expect(album.validate).to.equal(NO);
+        });
+    });
+});
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
-
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
-@end
+SpecEnd
