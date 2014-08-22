@@ -85,7 +85,7 @@ There are some built-in validators. (Or you can add your own.)
 + (id<AQMValueValidator>)telephone;
 ```
 
-Just implement `- (BOOL)validate:(id)value` to use your validator.
+Just implement `- (BOOL)validate:(id)value` to bring your own validator.
 
 ### Callbacks
 
@@ -101,9 +101,6 @@ These methods are called for each timing.
 - (void)afterSave;
 ```
 
-Advanced
----
-
 ### Serialization
 
 As AquaModel inherits MTLModel, you can serialize them into / from JSON Dictionary.
@@ -113,3 +110,30 @@ As AquaModel inherits MTLModel, you can serialize them into / from JSON Dictiona
 
 [Album modelWithDictionary:dictionary];
 ```
+
+You should implement following class method.
+
+```objc
++ (NSDictionary *)JSONKeyPathsByPropertyKey;
+```
+
+Like this,
+
+```objc
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+        @"URL": @"url",
+        @"HTMLURL": @"html_url",
+        @"assignee": @"assignee",
+        @"updatedAt": @"updated_at"
+    };
+}
+```
+
+Loadmap
+---
+
+- [ ] Scope and Querying.
+- [ ] List fetching and support paging.
+- [ ] Handle image property (over HTTP) better.
+- [ ] Better remote / local database integration. (And request caching.)
