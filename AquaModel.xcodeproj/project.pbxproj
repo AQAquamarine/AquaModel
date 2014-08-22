@@ -28,6 +28,7 @@
 		D411F28F19A79D8100EA2ECF /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F28E19A79D8100EA2ECF /* Album.m */; };
 		D411F29219A79FA600EA2ECF /* AQMShorterThanValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F29119A79FA600EA2ECF /* AQMShorterThanValidator.m */; };
 		D411F29519A7A3DF00EA2ECF /* AQMLongerThanValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F29419A7A3DF00EA2ECF /* AQMLongerThanValidator.m */; };
+		D411F29919A7A5A700EA2ECF /* AQMRegexpValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F29819A7A5A700EA2ECF /* AQMRegexpValidator.m */; };
 		D9B8265D730E4D468D664C0E /* libPods-AquaModelTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 480082D06E27491497B60057 /* libPods-AquaModelTests.a */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,8 @@
 		D411F29319A7A3DF00EA2ECF /* AQMLongerThanValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQMLongerThanValidator.h; sourceTree = "<group>"; };
 		D411F29419A7A3DF00EA2ECF /* AQMLongerThanValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQMLongerThanValidator.m; sourceTree = "<group>"; };
 		D411F29619A7A46600EA2ECF /* AQMValidators.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMValidators.h; sourceTree = "<group>"; };
+		D411F29719A7A5A700EA2ECF /* AQMRegexpValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQMRegexpValidator.h; sourceTree = "<group>"; };
+		D411F29819A7A5A700EA2ECF /* AQMRegexpValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQMRegexpValidator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,13 +212,15 @@
 		D411F28919A796CC00EA2ECF /* Validator */ = {
 			isa = PBXGroup;
 			children = (
+				D411F29619A7A46600EA2ECF /* AQMValidators.h */,
 				D411F28A19A7984D00EA2ECF /* AQMPresenceValidator.h */,
 				D411F28B19A7984D00EA2ECF /* AQMPresenceValidator.m */,
 				D411F29019A79FA600EA2ECF /* AQMShorterThanValidator.h */,
 				D411F29119A79FA600EA2ECF /* AQMShorterThanValidator.m */,
 				D411F29319A7A3DF00EA2ECF /* AQMLongerThanValidator.h */,
 				D411F29419A7A3DF00EA2ECF /* AQMLongerThanValidator.m */,
-				D411F29619A7A46600EA2ECF /* AQMValidators.h */,
+				D411F29719A7A5A700EA2ECF /* AQMRegexpValidator.h */,
+				D411F29819A7A5A700EA2ECF /* AQMRegexpValidator.m */,
 			);
 			name = Validator;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				D411F25619A7839500EA2ECF /* main.m in Sources */,
 				D411F28719A7944C00EA2ECF /* AQMValidator.m in Sources */,
 				D411F28C19A7984D00EA2ECF /* AQMPresenceValidator.m in Sources */,
+				D411F29919A7A5A700EA2ECF /* AQMRegexpValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

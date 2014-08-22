@@ -12,5 +12,6 @@
 #import "AQMPresenceValidator.h"
 #import "AQMLongerThanValidator.h"
 #import "AQMShorterThanValidator.h"
+#import "AQMRegexpValidator.h"
 
 #endif
