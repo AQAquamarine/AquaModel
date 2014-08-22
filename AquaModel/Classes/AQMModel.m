@@ -67,6 +67,11 @@
 
 # pragma mark - Requestable
 
+// Please override the method.
+- (NSString *)identifier {
+    return @"";
+}
+
 + (void)fetch:(NSUInteger)identifier {
     // TODO
 }
@@ -81,10 +86,12 @@
 
 # pragma mark - AQMRequestable
 
+// Please override the method.
 + (NSString *)resourceBasePath {
     return [NSStringFromClass(self) lowercaseString]; // TODO: plularize
 }
 
+// Please override the method.
 + (NSDictionary *)resourceMap {
     return @{
         @(AQMRequestTypeShow): @[@(AQMRequestMethodGET), @"/:id"],
@@ -96,18 +103,23 @@
 
 # pragma mark - Callbackable
 
+// Please override the method.
 - (void)afterCreate {
 }
 
+// Please override the method.
 - (void)beforeValidation {
 }
 
+// Please override the method.
 - (void)afterValidation {
 }
 
+// Please override the method.
 - (void)beforeSave {
 }
 
+// Please override the method.
 - (void)afterSave {
 }
 
