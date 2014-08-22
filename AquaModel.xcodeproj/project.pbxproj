@@ -23,6 +23,7 @@
 		D411F27319A7839500EA2ECF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D411F27119A7839500EA2ECF /* InfoPlist.strings */; };
 		D411F27519A7839500EA2ECF /* AquaModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F27419A7839500EA2ECF /* AquaModelTests.m */; };
 		D411F28119A7848D00EA2ECF /* AQMModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F28019A7848D00EA2ECF /* AQMModel.m */; };
+		D411F28719A7944C00EA2ECF /* AQMValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F28619A7944C00EA2ECF /* AQMValidator.m */; };
 		D9B8265D730E4D468D664C0E /* libPods-AquaModelTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 480082D06E27491497B60057 /* libPods-AquaModelTests.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,9 @@
 		D411F28219A7878700EA2ECF /* AQMRequestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMRequestable.h; sourceTree = "<group>"; };
 		D411F28319A7921B00EA2ECF /* AQMValidatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMValidatable.h; sourceTree = "<group>"; };
 		D411F28419A792D100EA2ECF /* AQMCallbackable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMCallbackable.h; sourceTree = "<group>"; };
+		D411F28519A7944C00EA2ECF /* AQMValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQMValidator.h; sourceTree = "<group>"; };
+		D411F28619A7944C00EA2ECF /* AQMValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQMValidator.m; sourceTree = "<group>"; };
+		D411F28819A795CE00EA2ECF /* AQMValueValidator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMValueValidator.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,7 +180,10 @@
 			children = (
 				D411F27F19A7848D00EA2ECF /* AQMModel.h */,
 				D411F28019A7848D00EA2ECF /* AQMModel.m */,
+				D411F28519A7944C00EA2ECF /* AQMValidator.h */,
+				D411F28619A7944C00EA2ECF /* AQMValidator.m */,
 				D411F28219A7878700EA2ECF /* AQMRequestable.h */,
+				D411F28819A795CE00EA2ECF /* AQMValueValidator.h */,
 				D411F28319A7921B00EA2ECF /* AQMValidatable.h */,
 				D411F28419A792D100EA2ECF /* AQMCallbackable.h */,
 			);
@@ -352,6 +359,7 @@
 				D411F28119A7848D00EA2ECF /* AQMModel.m in Sources */,
 				D411F26019A7839500EA2ECF /* AQMViewController.m in Sources */,
 				D411F25619A7839500EA2ECF /* main.m in Sources */,
+				D411F28719A7944C00EA2ECF /* AQMValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
