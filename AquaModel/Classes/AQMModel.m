@@ -43,7 +43,8 @@
 }
 
 - (BOOL)destroy {
-    //TODO
+    if (!self.entity) { return NO; }
+    [[self entity] delete];
     return YES;
 }
 
