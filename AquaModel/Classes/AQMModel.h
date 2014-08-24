@@ -31,6 +31,7 @@
 
 # pragma mark - Serializable (Public)
 
+- (NSDictionary *)dictionaryRepresentation;
 + (instancetype)modelWithDictionary:(NSDictionary *)dictionary;
 
 @end

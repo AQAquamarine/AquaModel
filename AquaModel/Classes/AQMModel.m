@@ -180,11 +180,17 @@
     return @{};
 }
 
-# pragma mark - Seriarizable (Public)
+# pragma mark - JSONSerialization
 
 // Please override the mtheod.
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{};
+}
+
+# pragma mark - Seriarizable (Public)
+
+- (NSDictionary *)dictionaryRepresentation {
+    return [MTLJSONAdapter JSONDictionaryFromModel:self];
 }
 
 + (instancetype)modelWithDictionary:(NSDictionary *)dictionary {
