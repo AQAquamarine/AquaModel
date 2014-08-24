@@ -31,6 +31,10 @@
 		D411F29919A7A5A700EA2ECF /* AQMRegexpValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F29819A7A5A700EA2ECF /* AQMRegexpValidator.m */; };
 		D411F29C19A7A72A00EA2ECF /* AQMAnyOfValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F29B19A7A72A00EA2ECF /* AQMAnyOfValidator.m */; };
 		D411F29F19A7A81000EA2ECF /* Dog.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F29E19A7A81000EA2ECF /* Dog.m */; };
+		D411F2A419A9BB7400EA2ECF /* AQMModel+ActiveRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F2A319A9BB7400EA2ECF /* AQMModel+ActiveRecord.m */; };
+		D411F2A719A9BBDC00EA2ECF /* AQMModel+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F2A619A9BBDC00EA2ECF /* AQMModel+Validation.m */; };
+		D411F2AA19A9BCB500EA2ECF /* AQMModel+Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F2A919A9BCB500EA2ECF /* AQMModel+Callback.m */; };
+		D411F2AD19A9BD9C00EA2ECF /* AQMModel+Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F2AC19A9BD9C00EA2ECF /* AQMModel+Serialization.m */; };
 		D9B8265D730E4D468D664C0E /* libPods-AquaModelTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 480082D06E27491497B60057 /* libPods-AquaModelTests.a */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +95,14 @@
 		D411F29B19A7A72A00EA2ECF /* AQMAnyOfValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQMAnyOfValidator.m; sourceTree = "<group>"; };
 		D411F29D19A7A81000EA2ECF /* Dog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dog.h; sourceTree = "<group>"; };
 		D411F29E19A7A81000EA2ECF /* Dog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Dog.m; sourceTree = "<group>"; };
+		D411F2A219A9BB7400EA2ECF /* AQMModel+ActiveRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQMModel+ActiveRecord.h"; sourceTree = "<group>"; };
+		D411F2A319A9BB7400EA2ECF /* AQMModel+ActiveRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AQMModel+ActiveRecord.m"; sourceTree = "<group>"; };
+		D411F2A519A9BBDC00EA2ECF /* AQMModel+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQMModel+Validation.h"; sourceTree = "<group>"; };
+		D411F2A619A9BBDC00EA2ECF /* AQMModel+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AQMModel+Validation.m"; sourceTree = "<group>"; };
+		D411F2A819A9BCB500EA2ECF /* AQMModel+Callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQMModel+Callback.h"; sourceTree = "<group>"; };
+		D411F2A919A9BCB500EA2ECF /* AQMModel+Callback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AQMModel+Callback.m"; sourceTree = "<group>"; };
+		D411F2AB19A9BD9C00EA2ECF /* AQMModel+Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQMModel+Serialization.h"; sourceTree = "<group>"; };
+		D411F2AC19A9BD9C00EA2ECF /* AQMModel+Serialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AQMModel+Serialization.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,15 +216,13 @@
 		D411F27E19A783B800EA2ECF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D411F2A119A9BB5700EA2ECF /* Category */,
+				D411F2A019A9BB1D00EA2ECF /* Protocol */,
 				D411F28919A796CC00EA2ECF /* Validator */,
 				D411F27F19A7848D00EA2ECF /* AQMModel.h */,
 				D411F28019A7848D00EA2ECF /* AQMModel.m */,
 				D411F28519A7944C00EA2ECF /* AQMValidator.h */,
 				D411F28619A7944C00EA2ECF /* AQMValidator.m */,
-				D411F28219A7878700EA2ECF /* AQMRequestable.h */,
-				D411F28819A795CE00EA2ECF /* AQMValueValidator.h */,
-				D411F28319A7921B00EA2ECF /* AQMValidatable.h */,
-				D411F28419A792D100EA2ECF /* AQMCallbackable.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -233,6 +243,32 @@
 				D411F29B19A7A72A00EA2ECF /* AQMAnyOfValidator.m */,
 			);
 			name = Validator;
+			sourceTree = "<group>";
+		};
+		D411F2A019A9BB1D00EA2ECF /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				D411F28819A795CE00EA2ECF /* AQMValueValidator.h */,
+				D411F28319A7921B00EA2ECF /* AQMValidatable.h */,
+				D411F28219A7878700EA2ECF /* AQMRequestable.h */,
+				D411F28419A792D100EA2ECF /* AQMCallbackable.h */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
+		D411F2A119A9BB5700EA2ECF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D411F2A219A9BB7400EA2ECF /* AQMModel+ActiveRecord.h */,
+				D411F2A319A9BB7400EA2ECF /* AQMModel+ActiveRecord.m */,
+				D411F2A519A9BBDC00EA2ECF /* AQMModel+Validation.h */,
+				D411F2A619A9BBDC00EA2ECF /* AQMModel+Validation.m */,
+				D411F2A819A9BCB500EA2ECF /* AQMModel+Callback.h */,
+				D411F2A919A9BCB500EA2ECF /* AQMModel+Callback.m */,
+				D411F2AB19A9BD9C00EA2ECF /* AQMModel+Serialization.h */,
+				D411F2AC19A9BD9C00EA2ECF /* AQMModel+Serialization.m */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -400,15 +436,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D411F2A419A9BB7400EA2ECF /* AQMModel+ActiveRecord.m in Sources */,
 				D411F25A19A7839500EA2ECF /* AQMAppDelegate.m in Sources */,
 				D411F29219A79FA600EA2ECF /* AQMShorterThanValidator.m in Sources */,
 				D411F29C19A7A72A00EA2ECF /* AQMAnyOfValidator.m in Sources */,
 				D411F29519A7A3DF00EA2ECF /* AQMLongerThanValidator.m in Sources */,
+				D411F2AA19A9BCB500EA2ECF /* AQMModel+Callback.m in Sources */,
 				D411F28119A7848D00EA2ECF /* AQMModel.m in Sources */,
 				D411F26019A7839500EA2ECF /* AQMViewController.m in Sources */,
 				D411F25619A7839500EA2ECF /* main.m in Sources */,
 				D411F28719A7944C00EA2ECF /* AQMValidator.m in Sources */,
 				D411F28C19A7984D00EA2ECF /* AQMPresenceValidator.m in Sources */,
+				D411F2A719A9BBDC00EA2ECF /* AQMModel+Validation.m in Sources */,
+				D411F2AD19A9BD9C00EA2ECF /* AQMModel+Serialization.m in Sources */,
 				D411F29919A7A5A700EA2ECF /* AQMRegexpValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
