@@ -3,16 +3,22 @@ PODS:
   - Mantle (1.5):
     - Mantle/extobjc
   - Mantle/extobjc (1.5)
+  - ObjectiveRecord (1.5.0):
+    - ObjectiveSugar
+  - ObjectiveSugar (1.1.0)
   - Specta (0.2.1)
 
 DEPENDENCIES:
   - Expecta
   - Mantle
+  - ObjectiveRecord
   - Specta
 
 SPEC CHECKSUMS:
   Expecta: 03aabd0a89d8dea843baecb19a7fd7466a69a31d
   Mantle: c67a7e45e14196ed42b2a7cbb98ff6a9920e6b92
+  ObjectiveRecord: 173527cdf923ee956f6b0a4430916534b54583f5
+  ObjectiveSugar: f48793f5902c77cfc02a4ce46d2e8ecddcad4dc2
   Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
 
 COCOAPODS: 0.33.1

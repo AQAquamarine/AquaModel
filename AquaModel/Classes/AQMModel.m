@@ -9,8 +9,11 @@
 #import "AQMModel.h"
 #import "AQMValueValidator.h"
 #import <CoreData/CoreData.h>
+#import <ObjectiveRecord.h>
 
 @implementation AQMModel
+
+@synthesize entity;
 
 - (instancetype)init {
     self = [super init];
@@ -32,15 +35,47 @@
 
 - (BOOL)update {
     if ([self validateWithCallbacks] == NO) { return NO; }
-    [self beforeSave];
-    // TODO
-    [self afterSave];
-    return YES;
+    if (self.entity) {
+        return [self saveWhenExists];
+    } else {
+        return [self saveWhenNotExists];
+    }
 }
 
 - (BOOL)destroy {
     //TODO
     return YES;
+}
+
+# pragma mark - ActiveRecord Helpers
+
+- (BOOL)saveWhenExists {
+    [self beforeSave];
+    if ([self saveActualEntity] == NO) { return NO; }
+    [self afterSave];
+    return YES;
+}
+
+- (BOOL)saveWhenNotExists {
+    [self beforeSave];
+    if ([self createNewEntityAndSave] == NO) { return NO; }
+    [self afterSave];
+    return YES;
+}
+
+- (BOOL)createNewEntityAndSave {
+    NSManagedObject *newEntity = [self createNewEntity];
+    if ([newEntity save] == NO) { return NO; }
+    self.entity = newEntity;
+    return YES;
+}
+
+- (NSManagedObject *)createNewEntity {
+    return [MTLManagedObjectAdapter managedObjectFromModel:self insertingIntoContext:[[CoreDataManager sharedManager] managedObjectContext] error:nil];
+}
+
+- (BOOL)saveActualEntity {
+    return [[self entity] save];
 }
 
 # pragma mark - Validatable
@@ -138,6 +173,10 @@
 // Please override the method.
 + (NSString *)managedObjectEntityName {
     return @"";
+}
+
++ (NSDictionary *)managedObjectKeysByPropertyKey {
+    return @{};
 }
 
 # pragma mark - Seriarizable (Public)

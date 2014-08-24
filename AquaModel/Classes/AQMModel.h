@@ -16,6 +16,8 @@
 
 @interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable, AQMValidatable, MTLJSONSerializing, MTLManagedObjectSerializing>
 
+@property (nonatomic, retain) NSManagedObject *entity;
+
 # pragma mark - ActiveRecord
 
 + (instancetype)create;
