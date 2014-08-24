@@ -8,6 +8,7 @@
 
 #import "AQMModel.h"
 #import "AQMValueValidator.h"
+#import <CoreData/CoreData.h>
 
 @implementation AQMModel
 
@@ -25,10 +26,12 @@
     return [self new];
 }
 
+- (BOOL)save {
+    return [self update];
+}
+
 - (BOOL)update {
-    [self beforeValidation];
-    if ([self validate] == NO) { return NO; }
-    [self afterValidation];
+    if ([self validateWithCallbacks] == NO) { return NO; }
     [self beforeSave];
     // TODO
     [self afterSave];
@@ -36,11 +39,18 @@
 }
 
 - (BOOL)destroy {
-    // TODO
-    return NO;
+    //TODO
+    return YES;
 }
 
 # pragma mark - Validatable
+
+- (BOOL)validateWithCallbacks {
+    [self beforeValidation];
+    if ([self validate] == NO) { return NO; }
+    [self afterValidation];
+    return YES;
+}
 
 - (BOOL)validate {
     NSDictionary *map = [[self class] validationMap];
@@ -121,6 +131,13 @@
 
 // Please override the method.
 - (void)afterSave {
+}
+
+# pragma mark - NSManagedObject
+
+// Please override the method.
++ (NSString *)managedObjectEntityName {
+    return @"";
 }
 
 # pragma mark - Seriarizable (Public)

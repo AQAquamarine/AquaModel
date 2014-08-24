@@ -12,12 +12,14 @@
 #import "AQMCallbackable.h"
 #import "AQMValidator.h"
 #import <MTLJSONAdapter.h>
+#import <MTLManagedObjectAdapter.h>
 
-@interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable, AQMValidatable, MTLJSONSerializing>
+@interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable, AQMValidatable, MTLJSONSerializing, MTLManagedObjectSerializing>
 
 # pragma mark - ActiveRecord
 
 + (instancetype)create;
+- (BOOL)save; // Alias of update.
 - (BOOL)update;
 - (BOOL)destroy;
 
