@@ -30,16 +30,16 @@
 }
 
 - (BOOL)save {
-    return [self update];
-}
-
-- (BOOL)update {
     if ([self validateWithCallbacks] == NO) { return NO; }
     if (self.entity) {
         return [self saveWhenExists];
     } else {
         return [self saveWhenNotExists];
     }
+}
+
+- (BOOL)update {
+    return [self save];
 }
 
 - (BOOL)destroy {
