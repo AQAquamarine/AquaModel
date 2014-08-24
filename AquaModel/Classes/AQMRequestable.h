@@ -27,7 +27,7 @@ typedef NS_ENUM(NSUInteger, AQMRequestMethod) {
 
 @required
 
-- (NSString *)identifier;
++ (NSString *)identifierKey;
 
 //@example
 //return @"/albums";

@@ -14,8 +14,6 @@
 
 @implementation AQMModel (ActiveRecord)
 
-# pragma mark - ActiveRecord
-
 + (instancetype)create {
     return [self new];
 }
@@ -39,7 +37,15 @@
     return YES;
 }
 
-# pragma mark - ActiveRecord Helpers
++ (instancetype)find:(NSString *)identifier {
+    return [[self entityClass] find:identifier];
+}
+
++ (NSArray *)where:(NSString *)query {
+    return [[self entityClass] where:query];
+}
+
+# pragma mark - Helpers (CoreData)
 
 - (BOOL)saveWhenExists {
     [self beforeSave];
@@ -68,6 +74,17 @@
 
 - (BOOL)saveActualEntity {
     return [[self entity] save];
+}
+
+# pragma mark - Helpers
+
++ (Class)entityClass {
+    return NSClassFromString([self managedObjectEntityName]);
+}
+
+- (NSString *)identifier {
+    NSString *key = [[self class] identifierKey];
+    return [[self valueForKey:key] stringValue];
 }
 
 @end

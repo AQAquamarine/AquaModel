@@ -23,9 +23,9 @@
 # pragma mark - Requestable
 
 // PLEASE OVERRIDE THE METHOD!
-- (NSString *)identifier {
++ (NSString *)identifierKey {
     NSLog(@"You should override the method %@", @"-identifier");
-    return @"";
+    return @"identifier";
 }
 
 # pragma mark - AQMRequestable

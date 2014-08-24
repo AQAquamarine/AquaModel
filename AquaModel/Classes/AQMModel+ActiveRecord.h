@@ -15,4 +15,7 @@
 - (BOOL)update;
 - (BOOL)destroy;
 
++ (instancetype)find:(NSString *)identifier;
++ (NSArray *)where:(NSString *)query;
+
 @end
