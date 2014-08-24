@@ -12,6 +12,7 @@
 
 + (instancetype)create;
 - (BOOL)save; // Alias of update.
+- (BOOL)saveWithoutSavingCallbacks;
 - (BOOL)update;
 - (BOOL)destroy;
 

@@ -27,6 +27,15 @@
     }
 }
 
+- (BOOL)saveWithOutSavingCallbacks {
+    if ([self validateWithCallbacks] == NO) { return NO; }
+    if (self.entity) {
+        return [self saveActualEntity];
+    } else {
+        return [self createNewEntityAndSave];
+    }
+}
+
 - (BOOL)update {
     return [self save];
 }
