@@ -38,11 +38,44 @@
 }
 
 + (instancetype)find:(NSString *)identifier {
-    return [[self entityClass] find:identifier];
+    NSString *query = [NSString stringWithFormat:@"%@ == %@", [self identifierKey], identifier];
+    NSString *scoped = [self scopedQuery:query];
+    NSManagedObject *entity = [[self entityClass] find:scoped];
+    return [self modelWithManagedObject:entity];
 }
 
 + (NSArray *)where:(NSString *)query {
-    return [[self entityClass] where:query];
+    NSString *scoped = [self scopedQuery:query];
+    NSArray *entities = [[self entityClass] where:scoped];
+    return [self modelsWithManagedObjects:entities];
+}
+
+# pragma mark - Helpers (Querying)
+
++ (NSString *)scopedQuery:(NSString *)query {
+    if ([query isEqualToString:@""]) { return query; }
+    return [NSString stringWithFormat:@"%@ AND %@", [self scope] ,query];
+}
+
++ (NSString *)scope {
+    if ([self softDeletion] == NO) { return [self defaultScope]; }
+    return [NSString stringWithFormat:@"aqm_isDeleted == NO AND %@", [self defaultScope]];
+}
+
+# pragma mark - Helpers (MTLManagedObjectAdapter)
+
++ (instancetype)modelWithManagedObject:(NSManagedObject *)entity {
+    AQMModel *model = [MTLManagedObjectAdapter modelOfClass:self fromManagedObject:entity error:nil];
+    model.entity = entity;
+    return model;
+}
+
++ (NSArray *)modelsWithManagedObjects:(NSArray *)entities {
+    NSMutableArray *models = [[NSMutableArray alloc] init];
+    for (NSManagedObject *entity in entities) {
+        [models addObject:[self modelWithManagedObject:entity]];
+    }
+    return models;
 }
 
 # pragma mark - Helpers (CoreData)

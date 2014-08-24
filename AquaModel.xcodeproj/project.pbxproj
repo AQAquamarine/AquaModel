@@ -106,6 +106,7 @@
 		D411F2AC19A9BD9C00EA2ECF /* AQMModel+Serialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AQMModel+Serialization.m"; sourceTree = "<group>"; };
 		D411F2AE19A9C0B700EA2ECF /* AQMModel+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQMModel+Request.h"; sourceTree = "<group>"; };
 		D411F2AF19A9C0B700EA2ECF /* AQMModel+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AQMModel+Request.m"; sourceTree = "<group>"; };
+		D411F2B119A9CDA100EA2ECF /* AQMQueryable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AQMQueryable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +256,7 @@
 				D411F28319A7921B00EA2ECF /* AQMValidatable.h */,
 				D411F28219A7878700EA2ECF /* AQMRequestable.h */,
 				D411F28419A792D100EA2ECF /* AQMCallbackable.h */,
+				D411F2B119A9CDA100EA2ECF /* AQMQueryable.h */,
 			);
 			name = Protocol;
 			sourceTree = "<group>";

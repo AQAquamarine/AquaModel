@@ -11,12 +11,13 @@
 #import "AQMRequestable.h"
 #import "AQMValidatable.h"
 #import "AQMCallbackable.h"
+#import "AQMQueryable.h"
 #import <MTLJSONAdapter.h>
 #import <MTLManagedObjectAdapter.h>
 
 #import "AQMValidator.h"
 
-@interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable, AQMValidatable, MTLJSONSerializing, MTLManagedObjectSerializing>
+@interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable, AQMValidatable, AQMQueryable, MTLJSONSerializing, MTLManagedObjectSerializing>
 
 @property (nonatomic, retain) NSManagedObject *entity;
 

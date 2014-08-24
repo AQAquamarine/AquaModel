@@ -46,6 +46,18 @@
     };
 }
 
+# pragma mark - AQMQueryable
+
+// Override if needed.
++ (NSString *)defaultScope {
+    return @"";
+}
+
+// Override if needed.
++ (BOOL)softDeletion {
+    return YES;
+}
+
 # pragma mark - MTLManagedObjectSerializing
 
 // PLEASE OVERRIDE THE METHOD!
