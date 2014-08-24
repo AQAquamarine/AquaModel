@@ -33,7 +33,7 @@
 
 - (BOOL)destroy {
     if (!self.entity) { return NO; }
-    [[self entity] delete];
+    [self hardOrSoftDelete];
     return YES;
 }
 
@@ -48,6 +48,21 @@
     NSString *scoped = [self scopedQuery:query];
     NSArray *entities = [[self entityClass] where:scoped];
     return [self modelsWithManagedObjects:entities];
+}
+
+# pragma mark - Soft Deletion
+
+- (void)hardOrSoftDelete {
+    if ([[self class] softDeletion] == YES) {
+        [self softDelete];
+    } else {
+        [[self entity] delete];
+    }
+}
+
+- (void)softDelete {
+    self.aqm_isDeleted = true;
+    [self save];
 }
 
 # pragma mark - Helpers (Querying)

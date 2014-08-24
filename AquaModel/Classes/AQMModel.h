@@ -20,6 +20,7 @@
 @interface AQMModel : MTLModel <AQMRequestable, AQMCallbackable, AQMValidatable, AQMQueryable, MTLJSONSerializing, MTLManagedObjectSerializing>
 
 @property (nonatomic, retain) NSManagedObject *entity;
+@property (nonatomic, assign) BOOL aqm_isDeleted;
 
 @end
 

@@ -10,7 +10,7 @@
 
 @implementation AQMModel
 
-@synthesize entity;
+@synthesize entity, aqm_isDeleted;
 
 - (instancetype)init {
     self = [super init];
