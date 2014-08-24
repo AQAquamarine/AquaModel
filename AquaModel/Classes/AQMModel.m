@@ -123,6 +123,15 @@
 - (void)afterSave {
 }
 
-# pragma mark - JSONSeriarizable
+# pragma mark - Seriarizable (Public)
+
+// Please override the mtheod.
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{};
+}
+
++ (instancetype)modelWithDictionary:(NSDictionary *)dictionary {
+    return [MTLJSONAdapter modelOfClass:[self class] fromJSONDictionary:dictionary];
+}
 
 @end
