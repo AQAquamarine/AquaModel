@@ -35,6 +35,7 @@
 		D411F2A719A9BBDC00EA2ECF /* AQMModel+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F2A619A9BBDC00EA2ECF /* AQMModel+Validation.m */; };
 		D411F2AA19A9BCB500EA2ECF /* AQMModel+Callback.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F2A919A9BCB500EA2ECF /* AQMModel+Callback.m */; };
 		D411F2AD19A9BD9C00EA2ECF /* AQMModel+Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F2AC19A9BD9C00EA2ECF /* AQMModel+Serialization.m */; };
+		D411F2B019A9C0B700EA2ECF /* AQMModel+Request.m in Sources */ = {isa = PBXBuildFile; fileRef = D411F2AF19A9C0B700EA2ECF /* AQMModel+Request.m */; };
 		D9B8265D730E4D468D664C0E /* libPods-AquaModelTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 480082D06E27491497B60057 /* libPods-AquaModelTests.a */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,8 @@
 		D411F2A919A9BCB500EA2ECF /* AQMModel+Callback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AQMModel+Callback.m"; sourceTree = "<group>"; };
 		D411F2AB19A9BD9C00EA2ECF /* AQMModel+Serialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQMModel+Serialization.h"; sourceTree = "<group>"; };
 		D411F2AC19A9BD9C00EA2ECF /* AQMModel+Serialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AQMModel+Serialization.m"; sourceTree = "<group>"; };
+		D411F2AE19A9C0B700EA2ECF /* AQMModel+Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQMModel+Request.h"; sourceTree = "<group>"; };
+		D411F2AF19A9C0B700EA2ECF /* AQMModel+Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AQMModel+Request.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +270,8 @@
 				D411F2A919A9BCB500EA2ECF /* AQMModel+Callback.m */,
 				D411F2AB19A9BD9C00EA2ECF /* AQMModel+Serialization.h */,
 				D411F2AC19A9BD9C00EA2ECF /* AQMModel+Serialization.m */,
+				D411F2AE19A9C0B700EA2ECF /* AQMModel+Request.h */,
+				D411F2AF19A9C0B700EA2ECF /* AQMModel+Request.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				D411F29519A7A3DF00EA2ECF /* AQMLongerThanValidator.m in Sources */,
 				D411F2AA19A9BCB500EA2ECF /* AQMModel+Callback.m in Sources */,
 				D411F28119A7848D00EA2ECF /* AQMModel.m in Sources */,
+				D411F2B019A9C0B700EA2ECF /* AQMModel+Request.m in Sources */,
 				D411F26019A7839500EA2ECF /* AQMViewController.m in Sources */,
 				D411F25619A7839500EA2ECF /* main.m in Sources */,
 				D411F28719A7944C00EA2ECF /* AQMValidator.m in Sources */,

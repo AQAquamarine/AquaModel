@@ -22,31 +22,21 @@
 
 # pragma mark - Requestable
 
-// Please override the method.
+// PLEASE OVERRIDE THE METHOD!
 - (NSString *)identifier {
+    NSLog(@"You should override the method %@", @"-identifier");
     return @"";
-}
-
-+ (void)fetch:(NSUInteger)identifier {
-    // TODO
-}
-
-- (void)fetch {
-    // TODO
-}
-
-- (void)push {
-    // TODO
 }
 
 # pragma mark - AQMRequestable
 
-// Please override the method.
+// PLEASE OVERRIDE THE METHOD!
 + (NSString *)resourceBasePath {
+    NSLog(@"You should override the mthod %@", @"-resourceBasePath");
     return [NSStringFromClass(self) lowercaseString]; // TODO: plularize
 }
 
-// Please override the method.
+// Override the method if needed.
 + (NSDictionary *)resourceMap {
     return @{
         @(AQMRequestTypeShow): @[@(AQMRequestMethodGET), @"/:id"],
@@ -56,21 +46,25 @@
     };
 }
 
-# pragma mark - NSManagedObject
+# pragma mark - MTLManagedObjectSerializing
 
-// Please override the method.
+// PLEASE OVERRIDE THE METHOD!
 + (NSString *)managedObjectEntityName {
+    NSLog(@"You should override the method %@", @"-managedObjectEntityName");
     return @"";
 }
 
+// PLEASE OVERRIDE THE METHOD!
 + (NSDictionary *)managedObjectKeysByPropertyKey {
+    NSLog(@"You should override the method %@", @"-managedObjectKeysByPropertyKey");
     return @{};
 }
 
-# pragma mark - JSONSerialization
+# pragma mark - MTLJSONSerializing
 
-// Please override the mtheod.
+// PLEASE OVERRIDE THE METHOD!
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
+    NSLog(@"You should override the method %@", @"-JSONKeyPathsByPropertyKey");
     return @{};
 }
 
