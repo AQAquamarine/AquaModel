@@ -130,6 +130,44 @@ Like this,
 }
 ```
 
+Put them in one.
+---
+
+```objc
+// Album.m
+
+# pragma mark - Requestable
+
++ (NSString *)resourceBasePath {
+    return @"/albums";
+}
+
++ (NSDictionary *)resourceMap {
+    return @{
+        @(AQMRequestTypeShow): @[@(AQMRequestMethodGET), @"/:id"],
+        @(AQMRequestTypeCreate): @[@(AQMRequestMethodPOST), @"/"],
+        @(AQMRequestTypeUpdate): @[@(AQMRequestMethodPATCH), @"/:id"],
+        @(AQMRequestTypeDestroy): @[@(AQMRequestMethodDELETE), @"/:id"]
+    };
+}
+
+# pragma mark - Validatable
+
++ (NSDictionary *)validationMap {
+    return @{
+        @"title": @[[AQMValidator presence], [AQMValidator shorterThan:10], [AQMValidator longerThan:3]]
+    };
+}
+
+# pragma mark - Serializable
+
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+        @"title": @"title"
+    };
+}
+```
+
 Loadmap
 ---
 
