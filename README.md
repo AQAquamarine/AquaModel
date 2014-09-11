@@ -1,4 +1,4 @@
-AquaModel
+<img src="https://dl.dropboxusercontent.com/u/7817937/_github/AquaModelLogo.png" width="480px" />
 =========
 
 Is currently WIP!
@@ -175,3 +175,12 @@ Loadmap
 - [ ] List fetching and support paging.
 - [ ] Handle image property (over HTTP) better.
 - [ ] Better remote / local database integration. (And request caching.)
+
+References
+---
+
+- Realm
+- https://github.com/QueryKit/QueryKit
+- MagicalRecord
+- ObjectiveRecord
+- Mantle
